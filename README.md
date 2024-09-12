@@ -1,21 +1,13 @@
 # Django
 
-- **Creating Forms** - https://docs.djangoproject.com/en/5.1/topics/forms/#building-a-form-in-django:
-  - Learn how to create forms in Django to collect and process user input.
-- **Validation** - https://docs.djangoproject.com/en/5.1/ref/forms/validation/:
-  - Understand how to validate form data to ensure accuracy and integrity before processing it.
-    
-## 📚 Task: Add a Form and Validation to Your Project
-
-### 1. Create a Simple Form:
-- Add a form to collect data (e.g., a user’s name and email).
-- Define at least two fields in the form.
-
-### 2. Add Basic Validation:
-- Ensure the name field is required.
-- Validate that the email field contains a valid email address.
-
-### 3. Integrate the Form into a View:
-- Display the form in a view and render it in a template.
-- Handle form submission and show success or error messages.
-
+- **Django Views and URL Patterns**:
+     - **Creating Function-Based Views (For Models)**:
+       - Learn how to create function-based views to handle HTTP requests and return responses in Django.
+     - **Exchanging Data Between Views and Templates**:
+       - Explore how to pass data from views to templates and display dynamic content in your Django application.
+     - **Built-in class-based generic views** - https://docs.djangoproject.com/en/5.1/topics/class-based-views/generic-display/
+       - **List** - https://docs.djangoproject.com/en/5.1/ref/class-based-views/generic-display/#listview
+       - **Detail** - https://docs.djangoproject.com/en/5.1/ref/class-based-views/generic-display/#detailview
+       - **Create** - https://docs.djangoproject.com/en/5.1/ref/class-based-views/generic-editing/#django.views.generic.edit.CreateView
+       - **Update** - https://docs.djangoproject.com/en/5.1/ref/class-based-views/generic-editing/#django.views.generic.edit.UpdateView
+       - **Delete** - https://docs.djangoproject.com/en/5.1/ref/class-based-views/generic-editing/#django.views.generic.edit.DeleteView
