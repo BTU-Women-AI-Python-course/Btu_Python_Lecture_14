@@ -33,6 +33,21 @@ class MyModelListView(ListView):
 {% endblock %}
 ```
 
+make object name link to object detail
+```html
+<!-- mymodel_list.html -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>MyModel List</h1>
+  <ul>
+    {% for obj in objects %}
+      <li><a href="{% url 'mymodel_detail' obj.id %}">{{ obj.name }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+```
+
 **URL Configuration:**
 
 ```python
