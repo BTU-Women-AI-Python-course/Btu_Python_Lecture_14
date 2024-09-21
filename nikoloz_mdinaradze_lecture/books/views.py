@@ -38,3 +38,11 @@ def update_book(request, pk):
         form = BookForm(instance=book)
     return render(request, "books/books_update.html", {'form': form})
 
+
+def delete_book(request, pk):
+    book = get_object_or_404(Book, pk=pk)
+    if request.method == 'POST':
+        book.delete()
+        return HttpResponse("Success !!!")
+
+    return render(request, 'books/books_delete.html', {'book': book})
