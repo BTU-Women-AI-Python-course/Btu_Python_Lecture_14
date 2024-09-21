@@ -8,6 +8,7 @@
         <h3>{{ book.title }}</h3>
         <p>{{ book.author }}</p>
         <p>{{ book.year }}</p>
+        <a href="{% url 'books-detail' book.pk %}"><button>Read More</button></a>
         <hr>
     {% endfor %}
 {% endblock %}
