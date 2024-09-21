@@ -7,4 +7,5 @@
     <br>
     <a href="{% url 'books-list'%}"><button>Return Home</button></a>
     <a href="{% url 'books-update' book.pk %}"><button>Update Book</button></a>
+    <a href="{% url 'books-delete' book.pk %}"><button>Delete Book</button></a>
 {% endblock %}

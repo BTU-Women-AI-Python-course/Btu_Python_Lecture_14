@@ -3,9 +3,9 @@ from django.urls import path
 from books import views
 
 urlpatterns = [
-    path('create/', views.creat_book, name='books-create'),
-    path('', views.list_books, name='books-list'),
-    path('<int:pk>/', views.detail_book, name='books-detail'),
-    path('<int:pk>/update/', views.update_book, name='books-update'),
-    path('<int:pk>/delete/', views.delete_book, name='books-delete'),
+    path('create/', views.BookCreateView.as_view(), name='books-create'),
+    path('', views.BookListView.as_view(), name='books-list'),
+    path('<int:pk>/', views.BookDetailView.as_view(), name='books-detail'),
+    path('<int:pk>/update/', views.BookUpdateView.as_view(), name='books-update'),
+    path('<int:pk>/delete/', views.BookDeleteView.as_view(), name='books-delete'),
 ]
