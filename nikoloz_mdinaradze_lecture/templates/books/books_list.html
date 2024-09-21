@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Books</h1>
+    <a href="{% url 'books-create' %}"><button>Create Book</button></a>
+    <br>
+    {% for book in books %}
+        <hr>
+        <h3>{{ book.title }}</h3>
+        <p>{{ book.author }}</p>
+        <p>{{ book.year }}</p>
+        <hr>
+    {% endfor %}
+{% endblock %}

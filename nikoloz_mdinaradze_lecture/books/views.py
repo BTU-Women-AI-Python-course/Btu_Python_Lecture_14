@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 from books.forms import BookForm
+from books.models import Book
 
 
 # Create your views here.
@@ -14,3 +15,8 @@ def creat_book(request):
     else:
         form = BookForm()
         return render(request, "books/books_create.html", {'form': form})
+
+
+def list_books(request):
+    books = Book.objects.all()
+    return render(request, "books/books_list.html", {'books': books})
